@@ -593,7 +593,7 @@ Resources:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       TemplateURL: !Sub
-        - 'https://raw.githubusercontent.com/tsanghan/${artifactLocation}modules/access/access.yaml'
+        - 'https://${S3Bucket}.s3.${S3Region}.amazonaws.com/${artifactLocation}modules/access/access.yaml'
         - S3Region: !Ref 's3BucketRegion'
           S3Bucket: !Ref 's3BucketName'
       Parameters:
@@ -629,7 +629,7 @@ Resources:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       TemplateURL: !Sub
-        - 'https://raw.githubusercontent.com/tsanghan/${artifactLocation}modules/bigip-standalone/bigip-standalone.yaml'
+        - 'https://${S3Bucket}.s3.${S3Region}.amazonaws.com/${artifactLocation}modules/bigip-standalone/bigip-standalone.yaml'
         - S3Region: !Ref 's3BucketRegion'
           S3Bucket: !Ref 's3BucketName'
       Parameters:
@@ -694,7 +694,7 @@ Resources:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       TemplateURL: !Sub
-        - 'https://raw.githubusercontent.com/tsanghan/${artifactLocation}modules/bigip-standalone/bigip-standalone.yaml'
+        - 'https://${S3Bucket}.s3.${S3Region}.amazonaws.com/${artifactLocation}modules/bigip-standalone/bigip-standalone.yaml'
         - S3Region: !Ref 's3BucketRegion'
           S3Bucket: !Ref 's3BucketName'
       Parameters:
@@ -750,7 +750,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Properties:
       TemplateURL: !Sub
-        - https://raw.githubusercontent.com/tsanghan/${artifactLocation}modules/dag/dag.yaml
+        - https://${S3Bucket}.s3.${S3Region}.amazonaws.com/${artifactLocation}modules/dag/dag.yaml
         - S3Region: !Ref 's3BucketRegion'
           S3Bucket: !Ref 's3BucketName'
       Parameters:
@@ -779,7 +779,7 @@ Resources:
     Type: 'AWS::CloudFormation::Stack'
     Properties:
       TemplateURL: !Sub
-        - 'https://raw.githubusercontent.com/tsanghan/${artifactLocation}modules/function/function.yaml'
+        - 'https://${S3Bucket}.s3.${S3Region}.amazonaws.com/${artifactLocation}modules/function/function.yaml'
         - S3Region: !Ref 's3BucketRegion'
           S3Bucket: !Ref 's3BucketName'
       Parameters:
